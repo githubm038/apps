@@ -1,13 +1,12 @@
-#!groovy
-
 pipeline {
     agent {
         docker {
-            image 'python:3.8'
+            image 'python:3.7'
         }
     }
+
     stages {
-        stage('Environment preparation')
+        stage('Environment preparation') {
             steps {
                 echo "-=- preparing project environment -=-"
                 // Python dependencies
@@ -17,7 +16,9 @@ pipeline {
         stage('Compile') {
             steps {
                 echo "-=- compiling project -=-"
+                sh "python -m compileall ."
             }
         }
     }
+}
        
