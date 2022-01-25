@@ -22,7 +22,7 @@ echo "Deploying the Project.........."
 }
 }
 post {
-        always {
+        success {
             emailext body: 'A Test E-Mail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
