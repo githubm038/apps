@@ -12,7 +12,7 @@ pipeline {
                 echo "-=- preparing project environment -=-"
                 // Python dependencies
                 sh "python -m py_compile add2vals.py calc.py"
-                stash(name: 'compiled-results', includes: '*.py*')
+           
             }
         }
         stage('Compile') {
