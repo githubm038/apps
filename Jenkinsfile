@@ -20,5 +20,6 @@ pipeline {
                 echo "-=- compiling project -=-"
             }
         }
-    }      
+    }
+}
        
