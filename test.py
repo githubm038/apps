@@ -1,4 +1,3 @@
-cat <<-'TEST_CASES' > test.py
 #!/usr/bin/env python
 import unittest
 import app
